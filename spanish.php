@@ -25,3 +25,13 @@ function imprimir($text){
 function obtener($nombre){
     $_GET[$nombre];
 }
+
+/* for connect to database */
+
+function ConectarBase($host, $usuario, $contraseña, $basededatos){
+ $base=mysqli_connect($host,$usuario,$contraseña,$basededatos);
+}
+/* for query to the database */
+function AccionBase($basededatos, $csql){
+   $accion= mysqli_query($basededatos, $csql);
+}
